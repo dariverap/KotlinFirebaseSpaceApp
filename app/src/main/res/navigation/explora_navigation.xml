@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/explora_navigation"
+    app:startDestination="@id/exploraListFragment">
+
+    <fragment
+        android:id="@+id/exploraFavoriteFragment"
+        android:name="com.diegorivera.ejercicio.view.fragments.ExploraFavoriteFragment"
+        android:label="fragment_explora_favorite"
+        tools:layout="@layout/fragment_explora_favorite" >
+        <action
+            android:id="@+id/action_exploraFavoriteFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:popUpTo="@id/exploraFavoriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exploraInfoFragment"
+        android:name="com.diegorivera.ejercicio.view.fragments.ExploraInfoFragment"
+        android:label="fragment_explora_info"
+        tools:layout="@layout/fragment_explora_info" />
+    <fragment
+        android:id="@+id/exploraListFragment"
+        android:name="com.diegorivera.ejercicio.view.fragments.ExploraListFragment"
+        android:label="fragment_explora_list"
+        tools:layout="@layout/fragment_explora_list" >
+        <action
+            android:id="@+id/action_exploraListFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:popUpTo="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.diegorivera.ejercicio.view.fragments.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="Personaje"
+            app:argType="com.diegorivera.ejercicio.model.Personaje" />
+        <action
+            android:id="@+id/action_detailFragment_to_exploraFavoriteFragment"
+            app:destination="@id/exploraFavoriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firebaseFragment"
+        android:name="com.diegorivera.ejercicio.view.fragments.FirebaseFragment"
+        android:label="fragment_firebase"
+        tools:layout="@layout/fragment_firebase" />
+    <activity
+        android:id="@+id/addPersonaje"
+        android:name="com.diegorivera.ejercicio.view.AddPersonajeActivity"
+        android:label="activity_add_personaje"
+        tools:layout="@layout/activity_add_personaje" />
+
+</navigation>
