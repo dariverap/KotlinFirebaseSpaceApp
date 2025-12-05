@@ -74,7 +74,11 @@ This project is built using the **MVVM (Model-View-ViewModel)** architectural pa
     Select "Open an Existing Project" and point to the cloned directory.
 
 3.  **Firebase Configuration**
-    *   The project requires a valid `google-services.json` file in the `app/` directory (an example is included, but for full functionality, ensure your SHA-1 fingerprint is registered in the Firebase Console).
+    *   Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
+    *   Register an Android app with package name `com.diegorivera.ejercicio`
+    *   Download your `google-services.json` and place it in the `app/` directory
+    *   Enable Firebase Authentication (Email/Password and Google Sign-In)
+    *   Register your SHA-1 fingerprint for Google Sign-In to work
 
 4.  **Build and Run**
     *   Sync Project with Gradle Files.

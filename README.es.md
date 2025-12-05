@@ -74,7 +74,11 @@ Este proyecto sigue el patrón arquitectónico **MVVM (Model-View-ViewModel)**, 
     Selecciona "Open an Existing Project" y apunta al directorio clonado.
 
 3.  **Configuración de Firebase**
-    *   El proyecto requiere un archivo `google-services.json` válido en el directorio `app/` (se incluye un ejemplo, pero para funcionalidad completa, asegura que tu huella SHA-1 esté registrada en la Consola de Firebase).
+    *   Crea un proyecto en [Firebase Console](https://console.firebase.google.com/)
+    *   Registra una app Android con el package name `com.diegorivera.ejercicio`
+    *   Descarga tu `google-services.json` y colócalo en el directorio `app/`
+    *   Habilita Firebase Authentication (Email/Password y Google Sign-In)
+    *   Registra tu huella SHA-1 para que funcione Google Sign-In
 
 4.  **Construir y Ejecutar**
     *   Sincroniza el proyecto con los archivos Gradle (Sync Project with Gradle Files).
